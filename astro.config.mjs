@@ -3,7 +3,7 @@ import react from '@astrojs/react';
 import vue from '@astrojs/vue';
 
 export default defineConfig({
-  site: 'https://ptejalaxioned/Astro_Demo_Project.github.io',
+  site: 'https://Astro_Demo_Project.github.io',
   base: 'my-repo',
   integrations: [react(), vue()],
   vite: {
