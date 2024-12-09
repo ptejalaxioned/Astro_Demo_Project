@@ -1,5 +1,16 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import vue from '@astrojs/vue';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://Astro_Demo_Project.github.io',
+  base: 'my-repo',
+  integrations: [react(), vue()],
+  vite: {
+    resolve: {
+      alias: {
+        '@': new URL('./src', import.meta.url).pathname, // This sets up the alias
+      },
+    },
+  },
+});

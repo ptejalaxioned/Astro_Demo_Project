@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1920px;
+  width: 82%;
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+.all-caps { text-transform: uppercase }
+.first-letter-caps { text-transform: capitalize; }
+.single-letter-caps::first-letter { text-transform: uppercase; }
+
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+}
+
+header .wrapper {
+  width: 73.3%;
+  padding: 10px 5% 17px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  background-color: #dfe5fb;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content a { color: #6e609b; }
+.sub-list { display: none; }
+.hamburger { display: none; }
+nav { width: 60%; }
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list a {
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 15.6px;
+  letter-spacing: .2px;
+}
+
+.header-center a {
+  background-color: #c0cffb;
+  color: #f0f8ff;
+  text-wrap: nowrap;
+}
+
+.button {
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #f0f8ff;
+  font-weight: 550;
+  font-size: 15.5px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.demos::after {
+  content: "\f078";
+  padding-left: 2px;
+  font-family: "FontAwesome";
+  font-size: 11px;
+}
+
+.icons-list a {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.icons-list a::before {
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  font-family: "FontAwesome";
+  font-size: 25px;
+  text-indent: 0;
+}
+
+.icons-list{
+  display: flex;
+}
+
+.cart::before { content: "\f07a"; }
+.search::before { content: "\f002"; }
+.earth::before { content: "\f0ac"; }
+.body-onclick{ overflow: hidden; }
+/*=================================
+  Header styling ends here
+=================================*/
+
+/*=================================
+  main styling starts here
+=================================*/
+/*=================================
+  banner styling starts here
+=================================*/
+.banner { position: relative; }
+.banner .wrapper { width: 100%; }
+.main-image { clip-path: ellipse(136% 49% at 50% 40%); }
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 57%;
+  color: #f0f8ff;
+  transform: translate(-50%, -50%);
+}
+
+.banner-buttons {
+  padding: 30px 0 60px;
+  display: flex;
+  gap: 14px;
+}
+
+.banner-buttons .button {
+  padding: 16px 48px;
+  border-radius: 41px;
+}
+
+.orange-button { background-color: #ff8a73; }
+.blue-button { background-color: #5580ff; }
+h1 { font-size: 55px; }
+
+h1 a {
+  margin-bottom: 20px;
+  color: #f0f8ff;
+}
+
+.banner-content-image img {
+  width: 751px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+/*=================================
+  banner styling ends here
+=================================*/
